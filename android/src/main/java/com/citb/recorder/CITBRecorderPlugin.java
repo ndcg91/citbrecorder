@@ -19,4 +19,31 @@ public class CITBRecorderPlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void start(PluginCall call) {
+        String name = call.getString("name");
+
+        JSObject ret = new JSObject();
+        ret.put("value", implementation.echo(value));
+        call.resolve(ret);
+    }
+
+     @PluginMethod
+    public void stop(PluginCall call) {
+        String value = call.getString("value");
+
+        JSObject ret = new JSObject();
+        ret.put("value", implementation.echo(value));
+        call.resolve(ret);
+    }
+
+     @PluginMethod
+    public void pause(PluginCall call) {
+        String value = call.getString("value");
+
+        JSObject ret = new JSObject();
+        ret.put("value", implementation.echo(value));
+        call.resolve(ret);
+    }
 }
